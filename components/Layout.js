@@ -10,9 +10,11 @@ export default function Layout({ children }) {
         <meta name="description" content="A blog website" />
       </Head>
 
-      <Navbar />
-      <main className="sm:container mx-auto p-4 h-screen">{ children }</main>
-      <Footer />
+      <div className="container mx-auto h-screen flex flex-col">
+        <Navbar />
+        <main className="grow p-4">{ children }</main>
+        <Footer />
+      </div>
     </>
   )
 }
