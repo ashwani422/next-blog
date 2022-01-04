@@ -13,11 +13,17 @@ export default function Navbar() {
         </div>
       </Link>
       <ul className="flex items-center">
+        {
+          session &&
+          <li className="ml-2">
+            <Link href='/dashboard'><a className="ml-1 rounded px-3 py-1 hover:bg-slate-900 hover:text-white">Dashboard</a></Link>
+          </li>
+        }
         <li className="ml-2">
           {
             !session ?
-              <Link href='/login'><a className="rounded px-3 py-1 hover:bg-slate-900 hover:text-white">Login</a></Link> :
-              <Link href='#'><a className="rounded px-3 py-1 hover:bg-slate-900 hover:text-white" onClick={() => signOut()}>Logout</a></Link>
+              <Link href='/login'><a className="ml-1 rounded px-3 py-1 hover:bg-slate-900 hover:text-white">Login</a></Link> :
+              <Link href='#'><a className="ml-1 rounded px-3 py-1 hover:bg-slate-900 hover:text-white" onClick={() => signOut()}>Logout</a></Link>
           }
         </li>
       </ul>
