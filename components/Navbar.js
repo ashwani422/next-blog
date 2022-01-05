@@ -13,6 +13,9 @@ export default function Navbar() {
         </div>
       </Link>
       <ul className="flex items-center">
+        <li className="ml-2">
+          <Link href='/'><a className="ml-1 rounded px-3 py-1 hover:bg-slate-900 hover:text-white">Home</a></Link>
+        </li>
         {
           session &&
           <li className="ml-2">
